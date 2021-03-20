@@ -1,0 +1,27 @@
+.destination-area{
+    margin-top:15px;
+}
+.line{
+    height: 5px;
+    width: 100%;
+}
+.search-area{
+    background-color: rgba(211, 211, 211, 0.746);
+    border-radius: 9px;
+    padding: 5px;
+    height: 240px;
+}
+h6{
+    margin-bottom: 0;
+    margin-left: 14px;
+    color: grey;
+}
+.search-area input{
+    border: none;
+    border-radius:5px;
+    width:90%;
+    height: 30px;
+    color: black;
+    font-weight: 600;
+    padding:5px;
+}

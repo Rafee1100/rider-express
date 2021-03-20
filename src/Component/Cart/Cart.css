@@ -1,0 +1,16 @@
+.card-img{
+    width: 150px;
+    height: 120px;
+}
+.single-card{
+    align-items: center;
+    padding: 20px;
+    border-radius: none;
+    border-radius: 8px;
+    border:none;
+    margin-left: 13px;
+    
+}
+.cards{
+    margin-top: 200px;
+}

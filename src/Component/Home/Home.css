@@ -1,0 +1,25 @@
+.homepage{
+    background-image: url('../../images/Bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+    align-items: center;
+}
+.card-area{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 1em;
+}
+@media only screen and (max-width: 600px) {
+  .card-area{
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+  }
+  .homepage{
+    background-image: url('../../images/Bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 2400px;
+    align-items: center;
+}
+  }
