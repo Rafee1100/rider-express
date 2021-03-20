@@ -1,61 +1,43 @@
-import './App.css';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button,Container } from 'react-bootstrap';
-import Header from './Component/Header/Header';
-import Home from './Component/Home/Home';
-import Destination from './Component/Destination/Destination';
-import Blog from './Component/Blog/Blog';
-import Login from './Component/Login/Login';
-import NotFound from './NotFound/NotFound';
-import Contact from './Component/Contact/Contact';
-import SignUp from './Component/SignUP/SignUp';
-import { createContext, useContext, useState } from 'react';
+import './App.css';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Header from './components/Header/Header';
+import Home from './components/Home/Home';
+import { createContext, useState } from 'react';
+import Login from './components/Login/Login';
+import Destination from './components/Destination/Destination';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
-export const UserContext = createContext();
+export const UserContext = createContext()
 
 function App() {
-  const [loggedInUser,setLoggedInUser]=useState({});
-
-
+  const [loggedInUser, setLoggedInUser] = useState({});
+  const [vehicle,setVehicle]=useState();
   return (
-   <UserContext.Provider className="container" value={[loggedInUser,setLoggedInUser]}>
-     <Router>
-       <Header/>
-       <Switch>
-        <Route path="/home">
-          <Home/>
-        </Route>
-        <Route path="/destination">
-          <Destination/>
-        </Route>
-        <Route path="/blog">
-          <Blog/>
-        </Route>
-        <Route path="/login">
-          <Login/>
-        </Route>
-        <Route path="/contact">
-          <Contact/>
-        </Route>
-        <Route path="/signup">
-          <SignUp/>
-        </Route>
-        <Route exact path="/">
-          <Home/>
-        </Route>
-        <Route path="*">
-          <NotFound/>
-        </Route>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser,vehicle,setVehicle]}>
+      <Router>
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            <Home/>
+          </Route>
 
-       </Switch>
-     </Router>
-   </UserContext.Provider>
+          <Route path="/home">
+            <Home/>
+          </Route>
+
+          <Route path="/destination">
+            <Destination/>
+          </Route>
+
+          <Route path="/login">
+            <Login />
+          </Route>
+
+        </Switch>
+      </Router>
+    </UserContext.Provider>
+
   );
 }
 
