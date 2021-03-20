@@ -5,6 +5,7 @@ import './Header.css'
 
 const Header = () => {
     return (
+        <Container>
            <Row className="navBar">
            <Col md={6}><h2>Cholo Jai</h2></Col>
            <Col md={6}>
@@ -17,6 +18,7 @@ const Header = () => {
                </ul>
             </Col>
            </Row>
+           </Container>
     );
 };
 

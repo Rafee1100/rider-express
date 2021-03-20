@@ -24,7 +24,7 @@ function App() {
 
 
   return (
-   <UserContext.Provider value={[loggedInUser,setLoggedInUser]}>
+   <UserContext.Provider className="container" value={[loggedInUser,setLoggedInUser]}>
      <Router>
        <Header/>
        <Switch>
